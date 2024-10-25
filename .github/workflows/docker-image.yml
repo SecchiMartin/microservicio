@@ -31,3 +31,10 @@ jobs:
       # Paso 4: Construir la imagen Docker
       - name: Build Docker image
         run: docker build -t my-docker-image:latest .
+
+      # Paso 5: Subir el archivo .jar generado como artefacto
+      - name: Upload JAR as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: my-app-jar
+          path: target/*.jar
