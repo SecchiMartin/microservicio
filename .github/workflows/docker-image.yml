@@ -30,7 +30,7 @@ jobs:
 
       # Paso 4: Construir la imagen Docker
       - name: Build Docker image
-        run: docker build -t my-docker-image:latest .
+        run: docker build -t api-image:latest .
 
       # Paso 5: Subir el archivo .jar generado como artefacto
       - name: Upload JAR as artifact
@@ -49,9 +49,9 @@ jobs:
 
       # Paso: Tag Docker image
       - name: Tag Docker image
-        run: docker tag my-docker-image:latest ghcr.io/SecchiMartin/my-docker-image:latest
+        run: docker tag api-image:latest ghcr.io/microservicio/api-image:latest
 
       # Paso: Push Docker image to GitHub Container Registry
       - name: Push Docker image
-        run: docker push ghcr.io/SecchiMartin/my-docker-image:latest
+        run: docker push ghcr.io/microservicio/api-image:latest
     
