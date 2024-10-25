@@ -46,11 +46,11 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.ORG_TOKEN }}
-
+        
           
       # Paso 7: Push Docker image to GitHub Container Registry
       - name: Push Docker image
-        run: docker tag api-image:latest ghcr.io/${{ github.repository_owner }}/api-image:latest
+        run: docker tag api-image:latest ghcr.io/secchimartin/api-image:latest
       - name: Push Docker image to GitHub
-        run: docker push ghcr.io/${{ github.repository_owner }}/api-image:latest
+        run: docker push ghcr.io/secchimartin/api-image:latest
     
