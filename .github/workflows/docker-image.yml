@@ -49,9 +49,9 @@ jobs:
 
       # Paso: Tag Docker image
       - name: Tag Docker image
-        run: docker tag api-image:latest ghcr.io/secchimartin/api-image:latest
+        run: docker tag api-image:latest ghcr.io/${{ github.actor }}/api-image:latest
 
       # Paso: Push Docker image to GitHub Container Registry
       - name: Push Docker image
-        run: docker push ghcr.io/secchimartin/api-image:latest
+        run: docker push ghcr.io/${{ github.actor }}/api-image:latest
     
