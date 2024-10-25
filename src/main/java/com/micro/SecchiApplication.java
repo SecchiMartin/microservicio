@@ -8,6 +8,7 @@ public class SecchiApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SecchiApplication.class, args);
+		
 	}
 
 }
