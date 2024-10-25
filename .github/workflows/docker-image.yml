@@ -49,7 +49,7 @@ jobs:
           
       # Paso 7: Push Docker image to GitHub Container Registry
       - name: Push Docker image
-        run: docker tag my-docker-image:latest ghcr.io/${{ github.repository_owner }}/my-docker-image:latest
+        run: docker tag api-image:latest ghcr.io/${{ github.repository_owner }}/api-image:latest
       - name: Push Docker image to GitHub
-        run: docker push ghcr.io/${{ github.repository_owner }}/my-docker-image:latest
+        run: docker push ghcr.io/${{ github.repository_owner }}/api-image:latest
     
