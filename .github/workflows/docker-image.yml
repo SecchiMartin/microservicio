@@ -16,11 +16,13 @@ jobs:
         uses: actions/checkout@v2
 
       # Paso 2: Configurar JDK para compilar el proyecto
-      - name: Set up JDK 17
+      - name: Set up JDK 17 with Zulu
         uses: actions/setup-java@v2
         with:
-          distribution: 'Azul Systems OpenJDK'
-          java-version: '17'
+          distribution: 'zulu'      # Especifica la distribución correcta (Zulu OpenJDK)
+          java-version: '17'        # Versión de Java (JDK 17)
+          java-package: 'jdk'       # Paquete JDK completo
+          architecture: 'x64'       # Arquitectura de 64 bits
 
       # Paso 3: Compilar el proyecto con Maven (genera el archivo .jar en 'target/')
       - name: Build with Maven
