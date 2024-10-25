@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: self-hosted  # Cambiado de ubuntu-latest a self-hosted
+    runs-on: ubuntu-latest
 
     steps:
       # Paso 1: Chequear el código desde el repositorio
